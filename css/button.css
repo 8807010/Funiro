@@ -1,6 +1,7 @@
 .button {
   display: inline-flex;
   padding: 0px 0px;
+  border: none;
 }
 .button--fw {
   width: 100%;
