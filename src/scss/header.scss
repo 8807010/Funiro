@@ -145,6 +145,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
+      column-gap: toRem(10);
     }
   }
 
@@ -346,7 +347,8 @@
     font-size: toRem(14);
     width: 100%;
     // padding: 0 toRem(20) 0 0;
-    padding: 12px 20px;
+    padding: toRem(12) toRem(20) toRem(12) 0;
+    height: toRem(45);
     color: $darkGrayColor;
   }
 }
