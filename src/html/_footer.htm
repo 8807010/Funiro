@@ -12,38 +12,51 @@
         </div>
       </div>
       <div data-spollers="768,max" class="footer__menu menu-footer">
-        <div class="menu-footer__column">
-          <button type="button" data-spoller class="menu-footer__title _footer-title">Menu</button>
-          <ul class="menu-footer__list">
-            <li><a href="" class="menu-footer__link">Products</a></li>
-            <li><a href="" class="menu-footer__link">Rooms</a></li>
-            <li><a href="" class="menu-footer__link">Inspirations</a></li>
-            <li><a href="" class="menu-footer__link">About Us</a></li>
-            <li><a href="" class="menu-footer__link">Terms & Policy</a></li>
-          </ul>
-        </div>
-        <div class="menu-footer__column">
-          <button type="button" data-spoller class="menu-footer__title _footer-title">Account</button>
-          <ul class="menu-footer__list">
-            <li><a href="" class="menu-footer__link">My Account</a></li>
-            <li><a href="" class="menu-footer__link">Checkout</a></li>
-            <li><a href="" class="menu-footer__link">My Cart</a></li>
-            <li><a href="" class="menu-footer__link">My catalog</a></li>
-          </ul>
-        </div>
-        <div class="menu-footer__column">
-          <button type="button" data-spoller class="menu-footer__title _footer-title">Stay Connected</button>
-          <ul class="menu-footer__list">
-            <li><a href="" class="menu-footer__link">Facebook</a></li>
-            <li><a href="" class="menu-footer__link">Instagram</a></li>
-            <li><a href="" class="menu-footer__link">Twitter</a></li>
-          </ul>
-        </div>
+        <details class="spollers__item menu-footer__column">
+          <summary class="spollers__title">
+            <button type="button" class="menu-footer__title _footer-title">Menu</button>
+          </summary>
+          <div class="spollers__body">
+            <ul class="menu-footer__list">
+              <li><a href="" class="menu-footer__link">Products</a></li>
+              <li><a href="" class="menu-footer__link">Rooms</a></li>
+              <li><a href="" class="menu-footer__link">Inspirations</a></li>
+              <li><a href="" class="menu-footer__link">About Us</a></li>
+              <li><a href="" class="menu-footer__link">Terms & Policy</a></li>
+            </ul>
+          </div>
+        </details>
+        <details class="spollers__item menu-footer__column">
+          <summary class="spollers__title">
+            <button type="button" class="menu-footer__title _footer-title">Account</button>
+          </summary>
+          <div class="spollers__body">
+            <ul class="menu-footer__list">
+              <li><a href="" class="menu-footer__link">My Account</a></li>
+              <li><a href="" class="menu-footer__link">Checkout</a></li>
+              <li><a href="" class="menu-footer__link">My Cart</a></li>
+              <li><a href="" class="menu-footer__link">My catalog</a></li>
+            </ul>
+          </div>
+        </details>
+        <details class="spollers__item menu-footer__column">
+          <summary class="spollers__title spollers__title--footer">
+            <button type="button" class="menu-footer__title _footer-title">Stay Connected</button>
+          </summary>
+          <div class="spollers__body">
+            <ul class="menu-footer__list">
+              <li><a href="" class="menu-footer__link">Facebook</a></li>
+              <li><a href="" class="menu-footer__link">Instagram</a></li>
+              <li><a href="" class="menu-footer__link">Twitter</a></li>
+            </ul>
+          </div>
+        </details>
       </div>
       <div class="footer__subscribe subscribe">
         <div class="subscribe__title _footer-title">Stay Updated</div>
-        <form data-message="subscribe" data-test action="#" class="subscribe__form">
-          <input autocomplete="off" type="text" name="form[]" data-error="Error" data-validate
+        <form data-message="subscribe" action="#" data-dev data-popup-message="#form-message" class="subscribe__form"
+          method="POST">
+          <input autocomplete="off" type="text" name="form[]" data-error="Error" data-required="email"
             placeholder="Enter your email" class="subscribe__input input">
           <button type="submit" class="subscribe__button _icon-send"></button>
         </form>

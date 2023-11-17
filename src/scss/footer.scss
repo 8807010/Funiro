@@ -46,7 +46,7 @@
     line-height: 1.5;
 
     &:not(:last-child) {
-      margin: 0px 0px 1em 0px;
+      margin: 0 0 1em 0;
     }
   }
 
@@ -117,7 +117,7 @@
       margin: 0px 0px math.div(16px, 24px) * 1em 0px;
     }
 
-    ._init & {
+    ._spoller-init & {
       display: flex;
       width: 100%;
       flex-direction: row-reverse;
@@ -132,7 +132,7 @@
       }
     }
 
-    &._active {
+    ._spoller-active & {
       &::before {
         transform: rotate(-180deg);
       }
@@ -220,3 +220,6 @@
 }
 
 //====================================================================================================
+
+
+.spollers__title--footer {}
