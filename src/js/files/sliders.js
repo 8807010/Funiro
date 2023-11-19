@@ -28,84 +28,38 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
   // Список слайдерів
   // Перевіряємо, чи є слайдер на сторінці
-  if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+  if (document.querySelector('.slider-main__body')) { // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
-    new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+    new Swiper('.slider-main__body', { // Вказуємо склас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
-      modules: [Navigation],
+      modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
-      spaceBetween: 0,
-      //autoHeight: true,
+      spaceBetween: 32,
+      watchOverflow: true,
       speed: 800,
-
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      /*
-      // Ефекти
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
-
-      // Пагінація
-      /*
+      loop: true,
+      centeredSlides: true,
+      // loopAdditionalSlides: 5,
+      preloadImages: false,
+      parallax: true,
+      // Dotts
       pagination: {
-        el: '.swiper-pagination',
+        el: '.controls-slider-main__dotts',
         clickable: true,
       },
-      */
-
-      // Скроллбар
-      /*
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-      },
-      */
-
-      // Кнопки "вліво/вправо"
+      // Arrows
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
-      /*
-      // Брейкпоінти
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          autoHeight: true,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1268: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      },
-      */
-      // Події
-      on: {
-
+        nextEl: '.slider-main .slider-arrow-next',
+        prevEl: '.slider-main .slider-arrow-prev',
       }
     });
   }
 }
+
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
   let sliderScrollItems = document.querySelectorAll('.swiper_scroll');

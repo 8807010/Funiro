@@ -13,7 +13,7 @@
         position: absolute;
         top: 0;
         width: 100vw;
-        right: 376px;
+        right: toRem(376);
         height: 100%;
       }
     }
@@ -21,16 +21,16 @@
 
   // .main-slider__body
   &__body {
-    padding: 140px 0px 0px 0px;
+    padding-top: toRem(140);
     position: relative;
     z-index: 2;
 
     @media (max-width: $tablet) {
-      padding: 80px 0px 0px 0px;
+      padding-top: toRem(80);
     }
 
     @media (max-width: $mobile) {
-      padding: 50px 0px 0px 0px;
+      padding-top: toRem(50);
     }
 
     @media (min-width: $tablet) {
@@ -42,10 +42,10 @@
   &__content {
     align-self: flex-start;
     flex: 0 0 math.div(494, 1240) * 100%;
-    @include adaptiveValue("margin-bottom", 80, 15, 1);
+    @include adaptiveValue("margin-bottom", 80, 15);
 
     @media (max-width: $tablet) {
-      margin: 0px -15px;
+      margin: 0 toRem(-15);
     }
   }
 
@@ -56,7 +56,7 @@
     align-self: flex-end;
 
     @media (min-width: $tablet) {
-      padding: 0px 0px 0px 32px;
+      padding-left: toRem(32);
     }
   }
 }
@@ -64,14 +64,14 @@
 .content-main {
   position: relative;
   z-index: 5;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: toRem(15);
+  padding-right: toRem(15);
   background: rgba(255, 255, 255, 0.72);
-  @include adaptiveValue("padding-top", 60, 15, 1);
-  @include adaptiveValue("padding-bottom", 60, 15, 1);
+  @include adaptiveValue("padding-top", 60, 15);
+  @include adaptiveValue("padding-bottom", 60, 15);
 
   @media (min-width: $tablet) {
-    @include adaptiveValue("padding", 60, 1, 1);
+    @include adaptiveValue("padding", 60, 1);
     background: rgba(255, 255, 255, 0.9);
 
     /* Если браузер поддерживает backdrop-filter */
@@ -83,32 +83,32 @@
 
   // .content-main__title
   &__title {
-    @include adaptiveValue("font-size", 56, 24, 1);
+    @include adaptiveValue("font-size", 56, 24);
     font-weight: 700;
-    line-height: 120%;
+    line-height: 1.2;
 
     &:not(:last-child) {
-      margin: 0px 0px math.div(16px, 56px) * 1em 0px;
+      margin: 0 0 math.div(16px, 56px) * 1em 0;
     }
   }
 
   // .content-main__text
   &__text {
-    @include adaptiveValue("font-size", 20, 16, 1);
+    @include adaptiveValue("font-size", 20, 16);
     color: $grayColor;
     font-weight: 500;
-    line-height: 150%;
+    line-height: 1.5;
 
     &:not(:last-child) {
-      margin: 0px 0px math.div(48px, 20px) * 1em 0px;
+      margin: 0 0 math.div(48px, 20px) * 1em 0;
     }
   }
 
   // .content-main__button
   &__button {
     font-weight: 600;
-    @include adaptiveValue("min-height", 78, 45, 1);
-    @include adaptiveValue("font-size", 20, 16, 1);
+    @include adaptiveValue("min-height", 78, 45);
+    @include adaptiveValue("font-size", 20, 16);
     background-color: $orangeColor;
     color: #fff;
     width: 100%;
@@ -134,23 +134,22 @@
   // .slider-main__controls
   &__controls {
     align-self: stretch;
-    margin: 0px 0px 20px 0px;
+    margin-bottom: toRem(20);
 
     @media (max-width: $tablet) {
-      margin: 10px 0px 20px 0px;
+      margin: toRem(10) 0 toRem(20) 0;
     }
   }
 
   // .slider-main__body
   &__body {
-    overflow: visible;
 
     @media (min-width: $tablet) {
-      @include adaptiveValue("width", 934, 290, 1);
+      @include adaptiveValue("width", 934, 290);
     }
 
     @media (max-width: $tablet) {
-      margin: 0px -15px;
+      margin: 0 toRem(-15);
     }
   }
 
@@ -161,25 +160,25 @@
 
   // .slider-main__image
   &__image {
-    padding: 0px 0px 59.1% 0px;
+    padding-bottom: 59.1%;
   }
 
   // .slider-main__content
   &__content {
-    min-width: 295px;
-    max-height: 300px;
+    min-width: toRem(295);
+    max-height: toRem(300);
     overflow: auto;
     color: inherit;
     display: flex;
     flex-direction: column;
-    @include adaptiveValue("padding", 24, 15, 1);
+    @include adaptiveValue("padding", 24, 15);
     background: rgba(255, 255, 255, 0.9);
 
     @media (min-width: $mobile) {
       position: absolute;
-      min-width: 350px;
-      @include adaptiveValue("right", 40, 0, 1);
-      @include adaptiveValue("bottom", 40, 0, 1);
+      min-width: toRem(350);
+      @include adaptiveValue("right", 40, 0);
+      @include adaptiveValue("bottom", 40, 0);
     }
 
     /* Если браузер поддерживает backdrop-filter */
@@ -191,9 +190,9 @@
 
   // .slider-main__title
   &__title {
-    @include adaptiveValue("font-size", 28, 22, 1);
+    @include adaptiveValue("font-size", 28, 22);
     font-weight: 600;
-    line-height: 120%;
+    line-height: 1.2;
 
     &:not(:last-child) {
       margin: 0px 0px math.div(4px, 28px) * 1em 0px;
@@ -202,7 +201,7 @@
 
   // .slider-main__text
   &__text {
-    line-height: 150%;
+    line-height: 1.5;
     color: $grayColor;
 
     &:not(:last-child) {
@@ -214,15 +213,15 @@
   &__price {
     display: flex;
     flex-direction: row-reverse;
-    line-height: 150%;
+    line-height: 1.5;
     align-items: center;
     font-weight: 600;
     justify-content: space-between;
-    @include adaptiveValue("font-size", 20, 16, 1);
+    @include adaptiveValue("font-size", 20, 16);
 
     &::before {
-      margin: 0px 0px 0px 10px;
-      font-size: 12px;
+      margin-left: toRem(10);
+      font-size: toRem(12);
     }
   }
 }
@@ -236,7 +235,7 @@
     flex: 1 1 auto;
 
     @media (min-width: $tablet) {
-      padding: 0px 20px 0px 0px;
+      padding-right: toRem(20);
     }
 
     @media (max-width: $tablet) {

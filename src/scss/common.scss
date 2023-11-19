@@ -30,14 +30,14 @@
   transition: all 0.3s ease 0s;
 
   // .slider-arrow_prev
-  &_prev {
+  &-prev {
     &::before {
       transform: rotate(90deg);
     }
   }
 
-  // .slider-arrow_next
-  &_next {
+  // .slider-arrow-next
+  &-next {
     &::before {
       transform: rotate(-90deg);
     }
